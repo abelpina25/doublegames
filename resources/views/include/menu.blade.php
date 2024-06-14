@@ -67,14 +67,19 @@
             </ul>
             <!-- Dropdown para usuários autenticados -->
             @auth
-                <div class="btn-group">
+
+                <div class="btn-group p-5">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         <i class="fa fa-user"></i>
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
-                        <li><a class="dropdown-item" href="{{ route('admin.games.index') }}">Gerir Jogos</a></li>
-                        <li><a class="dropdown-item" href="{{ route('admin.games.create') }}">Inserir Jogo</a></li>
+                        @if (Auth::user()->name == 'admin')
+                            <li><a class="dropdown-item" href="{{ route('admin.games.index') }}">Gerir Jogos</a></li>
+                            <li><a class="dropdown-item" href="{{ route('admin.games.create') }}">Inserir Jogo</a></li>
+                        @else
+                            <li><a class="dropdown-item" href="{{ route('paygames.index') }}">Jogos Comprados</a></li>
+                        @endif
                         <li>
                             <!-- Logout -->
                             <a class="dropdown-item" href="{{ route('logout') }}"
@@ -89,6 +94,31 @@
                         </li>
                     </ul>
                 </div>
+
+                @if (Auth::user()->name != 'admin')
+                    <div class="btn-group">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
+                            <!-- listar items adicionados ao carrinho -->
+                            @foreach ($items = LaraCart::getItems() as $item)
+                                <li>
+                                    <a class="dropdown-item">{{ $item->name }}</a>
+                                </li>
+                            @endforeach
+                            <!-- separador -->
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <!-- checkout -->
+                            <li><a class="dropdown-item" href="{{ route('cart.index') }}">Ver carrinho</a></li>
+
+                        </ul>
+                    </div>
+                @endif
             @endauth
         </div>
     </div>

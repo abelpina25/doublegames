@@ -9,6 +9,7 @@ class Game extends Model
 {
     use HasFactory;
 
+    // Campos da base de dados que podem ser preenchidos em massa
     protected $fillable = [
         'name',
         'description',

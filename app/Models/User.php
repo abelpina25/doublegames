@@ -41,4 +41,11 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    // relacao de 1 para muitos - ver jogos que o utilizador comprou
+    public function payGames()
+    {
+        // Define uma relação de "tem muitos" (hasMany) entre a tabela 'users' e 'pay_games', onde 'user_id' é a chave estrangeira na tabela 'pay_games'.
+        return $this->hasMany(PayGames::class);
+    }
 }

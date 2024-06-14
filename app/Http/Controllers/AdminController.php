@@ -103,15 +103,15 @@ class AdminController extends Controller
         ]);
         //descobre o id do jogo que foi inserido
         $gameId = $game->id;
-        //guardar o tipo de extensao de imagem
-        $extensionImage = $request->file('image')->getClientOriginalExtension();
 
-        // Gera nomes de arquivo únicos para o jogo e imagem
-        $zipFileName =  $gameId . '.zip';
-        $imageFileName =  $gameId . '.' . $extensionImage;
+
+
+
 
         // se arquivo zip foi feito upload, atualiza arquivo zip
         if ($request->file('zip_file')) {
+            // Gera nomes de arquivo únicos para o jogo
+            $zipFileName =  $gameId . '.zip';
             // Manipula os uploads de arquivo: salva o zip no armazenamento
             $zipPath = $request->file('zip_file')->storeAs('public/games', $zipFileName);
             // Ajusta os caminhos para remover o prefixo 'public/'
@@ -123,6 +123,12 @@ class AdminController extends Controller
 
         // se arquivo de imagem foi feito upload, atualiza imagem
         if ($request->file('image')) {
+            // guardar o tipo de extensao de imagem
+            $extensionImage = $request->file('image')->getClientOriginalExtension();
+
+            // Gera nomes de arquivo únicos para o imagem
+
+            $imageFileName =  $gameId . '.' . $extensionImage;
             // Manipula os uploads de arquivo: salva a imagem no armazenamento
             $imagePath = $request->file('image')->storeAs('public/games', $imageFileName);
             // Ajusta os caminhos para remover o prefixo 'public/'

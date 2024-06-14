@@ -34,27 +34,42 @@ Route::get('/loja', [App\Http\Controllers\ShopController::class, 'index'])->name
 //ver jogo por id, exemplo http://localhost:8000/jogos/1
 Route::get('/jogos/{id}', [App\Http\Controllers\GameController::class, 'show'])->name('games.show');
 
-//listar jogos e botoes para editar e apagar jogo
-Route::get('/admin/jogos', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.games.index');
+//routas que funcionam apenas quando o utilizador estiver autenticado
+Route::middleware('auth')->group(function () {
+    //listar jogos e botoes para editar e apagar jogo
+    Route::get('/admin/jogos', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.games.index');
 
-//formulario para criar jogo
-Route::get('/admin/jogos/create', [App\Http\Controllers\AdminController::class, 'create'])->name('admin.games.create');
+    //formulario para criar jogo
+    Route::get('/admin/jogos/create', [App\Http\Controllers\AdminController::class, 'create'])->name('admin.games.create');
 
-//POST para guardar jogo
-Route::post('/admin/jogos/store', [App\Http\Controllers\AdminController::class, 'store'])->name('admin.games.store');
-//formulario para editar
-Route::get('/admin/jogos/{game}/edit', [App\Http\Controllers\AdminController::class, 'edit'])->name('admin.games.edit');
-//PUT para atualizar jogo
-Route::put('/admin/{game}', [App\Http\Controllers\AdminController::class, 'update'])->name('admin.games.update');
-//DELETE para eleminar jogos
-Route::delete('/admin/jogos/{game}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.games.destroy');
+    //POST para guardar jogo
+    Route::post('/admin/jogos/store', [App\Http\Controllers\AdminController::class, 'store'])->name('admin.games.store');
+    //formulario para editar
+    Route::get('/admin/jogos/{game}/edit', [App\Http\Controllers\AdminController::class, 'edit'])->name('admin.games.edit');
+    //PUT para atualizar jogo
+    Route::put('/admin/{game}', [App\Http\Controllers\AdminController::class, 'update'])->name('admin.games.update');
+    //DELETE para eleminar jogos
+    Route::delete('/admin/jogos/{game}', [App\Http\Controllers\AdminController::class, 'destroy'])->name('admin.games.destroy');
+});
 
 
+//routas que funcionam apenas quando o utilizador estiver autenticado
+Route::middleware('auth')->group(function () {
+    //carrinho de compras
+    Route::get('/carrinho', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index');
+    Route::post('/carrinho/add', [App\Http\Controllers\CartController::class, 'add'])->name('cart.add');
+    Route::post('/carrinho/remove', [App\Http\Controllers\CartController::class, 'remove'])->name('cart.remove');
 
+    //POST guardar informacoes de checkout
+    Route::post('/checkout/process', [App\Http\Controllers\CheckoutController::class, 'process'])->name('checkout.process');
+
+    //listar jogos comprados por utilizador
+    Route::get('/jogos-comprados', [App\Http\Controllers\PayGamesController::class, 'index'])->name('paygames.index');
+});
 
 //links de manutencao do laravel
 
-//limpar cache do website
+//limpar cache do website e sempre que o web.php for alterado visitar este link
 Route::get('/clear-cache', function () {
     Artisan::call('cache:clear');
     Artisan::call('route:cache');
@@ -66,6 +81,6 @@ Route::get('/clear-cache', function () {
 //nao e possivel executar comandos php artisan no servidor cpanel da internet utilizar este link
 //para criar atalho da pasta storage no public
 //para os jogos estarem disponiveis para download/upload
-Route::get('/criar-atalho-storag-no-cpanel', function () {
+Route::get('/criar-atalho-storage-no-cpanel', function () {
     Artisan::call('storage:link');
 });

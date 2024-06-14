@@ -3,7 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+
+// Importa o modelo Game, que representa a tabela 'pay_games' no banco de dados.
 use App\Models\Game;
+
+// Importa a biblioteca zip, que é uma biblioteca para descompactar ficheiros zip.
 use ZanySoft\Zip\Zip;
 
 class GameController extends Controller

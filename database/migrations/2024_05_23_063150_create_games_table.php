@@ -12,13 +12,20 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('games', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->text('description');
-            $table->decimal('price', 8, 2);
-            $table->string('zip_path')->nullable();
-            $table->string('image_path')->nullable();
-            $table->timestamps();
+            $table->id(); // Define uma coluna de chave primária autoincremental.
+
+            $table->string('name'); // Define uma coluna para o nome do jogo.
+
+            $table->text('description'); // Define uma coluna para a descrição do jogo (texto longo).
+
+            $table->decimal('price', 8, 2); // Define uma coluna para o preço do jogo, com 8 dígitos no total e 2 dígitos após a vírgula.
+
+            $table->string('zip_path')->nullable(); // Define uma coluna para o caminho do arquivo ZIP do jogo, que pode ser nulo.
+
+            $table->string('image_path')->nullable(); // Define uma coluna para o caminho da imagem do jogo, que pode ser nulo.
+
+            $table->timestamps(); // Define as colunas de timestamps (created_at e updated_at) para registrar as timestamps de criação e atualização de cada registro.
+
         });
     }
 
