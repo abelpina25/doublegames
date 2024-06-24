@@ -27,7 +27,7 @@
                                         <input type="hidden" name="name" value="{{ $game->name }}">
                                         <input type="hidden" name="price" value="{{ $game->price }}">
 
-                                        <button type="submit" class="btn btn-success">Adicionar ao Carrinho</button>
+                                        <button type="submit" class="btn btn-danger">Adicionar ao Carrinho</button>
                                     </form>
                                 @endauth
                             </div>
