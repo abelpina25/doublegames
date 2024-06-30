@@ -1,232 +1,232 @@
+/* Estilos globais */
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif; /* Define a fonte para todo o documento */
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho dos elementos */
 }
 
+/* Estilos para o corpo da página */
 body {
-  min-height: 100vh;
-  background: url(imagens/imagem1.png) no-repeat;
-  background-size: cover;
-  background-position: center;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
+  min-height: 100vh; /* Garante que o corpo ocupe pelo menos toda a altura da tela */
+  background: url(imagens/imagem1.png) no-repeat; /* Imagem de fundo */
+  background-size: cover; /* Cubra toda a área do elemento */
+  background-position: center; /* Centraliza a imagem de fundo */
+  margin: 0; /* Remove margens padrão */
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Empilha elementos em coluna */
 }
 
+/* Estilos para o cabeçalho */
 .header {
-  position: fixed;
+  position: fixed; /* Fixa o cabeçalho no topo */
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 100px;
+  padding: 20px 100px; /* Espaçamento interno */
   color: white;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: space-between; /* Alinha itens à esquerda e à direita */
+  align-items: center; /* Alinha verticalmente ao centro */
+  z-index: 1000; /* Coloca o cabeçalho sobre outros elementos */
+  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
 }
 
+/* Estilos para links na barra de navegação */
 .navbar a {
-  color: #fff;
-  font-size: 18px;
+  color: #fff; /* Cor do texto */
+  font-size: 18px; /* Tamanho da fonte */
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-left: 80px !important;
+  padding-left: 80px !important; /* Espaçamento à esquerda */
 }
 
 .navbar a:hover {
-  color: white;
+  color: white; /* Cor do texto ao passar o mouse */
 }
 
-/* Rodape */
-
+/* Estilos para o conteúdo principal */
 .container {
-  flex: 1;
-  padding-top: 120px; /* Ajuste conforme necessário para evitar sobreposição com o header */
-  padding-bottom: 60px; /* Espaço para o rodapé */
+  flex: 1; /* Ocupa o espaço restante */
+  padding-top: 120px; /* Espaçamento superior */
+  padding-bottom: 60px; /* Espaçamento inferior */
   position: relative;
-  z-index: 1;
+  z-index: 1; /* Coloca sobre o fundo */
 }
 
+/* Estilos para o rodapé */
 .footer {
-  background-color: #212529;
-  color: white;
-  padding: 10px 20px;
+  background-color: #212529; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 10px 20px; /* Espaçamento interno */
   width: 100%;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  left: 0;
+  text-align: center; /* Alinhamento central do texto */
+  position: relative; /* Posição relativa */
+  bottom: 0; /* Alinha ao fundo */
+  left: 0; /* Alinha à esquerda */
 }
 
 .footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-size: 14px;
+  color: #fff; /* Cor dos links */
+  text-decoration: none; /* Sem sublinhado */
+  font-size: 14px; /* Tamanho da fonte */
 }
 
 .footer-links a:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
 
 .social-icons a {
-  color: white;
-  margin-right: 10px;
-  font-size: 20px;
+  color: white; /* Cor dos ícones sociais */
+  margin-right: 10px; /* Espaçamento entre ícones */
+  font-size: 20px; /* Tamanho dos ícones */
 }
 
+/* Estilos para a imagem de login */
 .login-image {
-  height: 100vh;
-  object-fit: cover;
+  height: 100vh; /* Altura total da tela */
+  object-fit: cover; /* Ajuste da imagem */
   width: 100%;
 }
 
+/* Estilos para quando não há produtos */
 .no-products {
-  min-height: calc(100vh - 180px); /* Ajuste conforme necessário para espaço entre header e footer */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #6c757d;
-  font-size: 1.2rem;
-  padding: 20px;
+  min-height: calc(100vh - 180px); /* Altura mínima */
+  display: flex; /* Flexbox */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  text-align: center; /* Alinhamento do texto */
+  color: #6c757d; /* Cor do texto */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  padding: 20px; /* Espaçamento interno */
 }
 
-/* register */
+/* Estilos para a página de registro/login */
 body {
-    background-color: #f8f9fa;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f8f9fa; /* Cor de fundo */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte alternativa */
 }
 
 .card {
-    border: none;
-    border-radius: 0.75rem;
+  border: none; /* Sem borda */
+  border-radius: 0.75rem; /* Borda arredondada */
 }
 
 .card-header {
-    border-radius: 0.75rem 0.75rem 0 0;
-    font-size: 1.25rem;
-    padding: 1rem;
+  border-radius: 0.75rem 0.75rem 0 0; /* Borda arredondada */
+  font-size: 1.25rem; /* Tamanho da fonte */
+  padding: 1rem; /* Espaçamento interno */
 }
 
 .card-body {
-    padding: 2rem;
+  padding: 2rem; /* Espaçamento interno */
 }
 
 .form-control {
-    border-radius: 0.5rem;
+  border-radius: 0.5rem; /* Borda arredondada */
 }
 
 .btn-primary {
-    background-color: #1d9ce6;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
+  background-color: #1d9ce6; /* Cor de fundo */
+  border: none; /* Sem borda */
+  border-radius: 0.5rem; /* Borda arredondada */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: background-color 0.3s ease; /* Transição suave */
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
 }
 
 .invalid-feedback {
-    display: block;
-    font-size: 0.875rem;
+  display: block; /* Mostra mensagem de erro */
+  font-size: 0.875rem; /* Tamanho da fonte */
 }
 
 .form-group label i {
-    color: #7d7c6c;
-    margin-right: 0.5rem;
+  color: #7d7c6c; /* Cor do ícone */
+  margin-right: 0.5rem; /* Espaçamento à direita */
 }
 
-/* Adicionando melhorias específicas para a página de login */
+/* Melhorias específicas para o formulário de login */
 .input-group-text {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 0.5rem 0 0 0.5rem;
+  background-color: #007bff; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  border: none; /* Sem borda */
+  border-radius: 0.5rem 0 0 0.5rem; /* Borda arredondada */
 }
 
 .input-group .form-control {
-    border-left: none;
-    border-radius: 0 0.5rem 0.5rem 0;
+  border-left: none; /* Sem borda à esquerda */
+  border-radius: 0 0.5rem 0.5rem 0; /* Borda arredondada */
 }
 
 .btn-info.btn-gradient {
-    background-image: linear-gradient(to right, #00c6ff, #0072ff);
-    border: none;
-    border-radius: 0.5rem;
-    color: white;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    transition: background-image 0.3s ease;
+  background-image: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente */
+  border: none; /* Sem borda */
+  border-radius: 0.5rem; /* Borda arredondada */
+  color: white; /* Cor do texto */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: background-image 0.3s ease; /* Transição suave */
 }
 
 .btn-info.btn-gradient:hover {
-    background-image: linear-gradient(to right, #0072ff, #00c6ff);
+  background-image: linear-gradient(to right, #0072ff, #00c6ff); /* Gradiente ao passar o mouse */
 }
 
 .input-group-prepend .input-group-text {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
+  border-top-right-radius: 0; /* Borda arredondada */
+  border-bottom-right-radius: 0; /* Borda arredondada */
 }
 
 .input-group .form-control {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
+  border-top-left-radius: 0; /* Borda arredondada */
+  border-bottom-left-radius: 0; /* Borda arredondada */
 }
 
-
-
+/* Estilos para botões com ícones */
 .btn-icon {
-  /* Estilos básicos para os botões com ícone */
-  padding: 12px;
-  border-radius: 50%; /* Borda arredondada para criar um botão circular */
+  padding: 12px; /* Espaçamento interno */
+  border-radius: 50%; /* Borda arredondada */
 }
 
 .btn-primary {
-  /* Cor de fundo para o botão Facebook */
-  background-color: #3b5998;
-  color: white;
+  background-color: #3b5998; /* Cor de fundo para Facebook */
+  color: white; /* Cor do texto para Facebook */
 }
 
 .btn-light {
-  /* Cor de fundo para o botão Google */
-  background-color: #ffffff;
-  color: #757575;
+  background-color: #ffffff; /* Cor de fundo para Google */
+  color: #757575; /* Cor do texto para Google */
 }
 
 .btn-dark {
-  /* Cor de fundo para o botão Apple */
-  background-color: #000000;
-  color: white;
+  background-color: #000000; /* Cor de fundo para Apple */
+  color: white; /* Cor do texto para Apple */
 }
 
 .btn-info {
-  /* Cor de fundo para o botão Discord */
-  background-color: #7289da;
-  color: white;
+  background-color: #7289da; /* Cor de fundo para Discord */
+  color: white; /* Cor do texto para Discord */
 }
 
 .btn-gradient {
-  /* Estilo para o botão "Iniciar Sessão" com gradiente */
-  background-image: linear-gradient(to right, #00c6ff, #0072ff);
-  border: none;
-  border-radius: 0.5rem;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  transition: background-image 0.3s ease;
+  background-image: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente para "Iniciar Sessão" */
+  border: none; /* Sem borda */
+  border-radius: 0.5rem; /* Borda arredondada */
+  color: white; /* Cor do texto */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: background-image 0.3s ease; /* Transição suave */
 }
 
 .btn-gradient:hover {
-  background-image: linear-gradient(to right, #0072ff, #00c6ff);
+  background-image: linear-gradient(to right, #0072ff, #00c6ff); /* Gradiente ao passar o mouse */
 }
+
 
 
 
