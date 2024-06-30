@@ -1,5 +1,8 @@
 * {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -7,7 +10,9 @@ body {
   background: url(imagens/imagem1.png) no-repeat;
   background-size: cover;
   background-position: center;
-  margin: 0; /* Remover margens padrão */
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -16,28 +21,211 @@ body {
   left: 0;
   width: 100%;
   padding: 20px 100px;
-  /* background: black; */ /* Remova esta linha para remover o fundo preto */
-  color: white; /* Cor do texto branca para melhor contraste */
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-
-
-
-
 
 .navbar a {
   color: #fff;
   font-size: 18px;
-
 }
+
 .navbar-expand-lg .navbar-nav .nav-link {
   padding-left: 80px !important;
 }
-.navbar a:hover{
-  color:blue
 
+.navbar a:hover {
+  color: white;
+}
+
+/* Rodape */
+
+.container {
+  flex: 1;
+  padding-top: 120px; /* Ajuste conforme necessário para evitar sobreposição com o header */
+  padding-bottom: 60px; /* Espaço para o rodapé */
+  position: relative;
+  z-index: 1;
+}
+
+.footer {
+  background-color: #212529;
+  color: white;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.login-image {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+.no-products {
+  min-height: calc(100vh - 180px); /* Ajuste conforme necessário para espaço entre header e footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #6c757d;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+/* register */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    border: none;
+    border-radius: 0.75rem;
+}
+
+.card-header {
+    border-radius: 0.75rem 0.75rem 0 0;
+    font-size: 1.25rem;
+    padding: 1rem;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.form-control {
+    border-radius: 0.5rem;
+}
+
+.btn-primary {
+    background-color: #1d9ce6;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+.invalid-feedback {
+    display: block;
+    font-size: 0.875rem;
+}
+
+.form-group label i {
+    color: #7d7c6c;
+    margin-right: 0.5rem;
+}
+
+/* Adicionando melhorias específicas para a página de login */
+.input-group-text {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.input-group .form-control {
+    border-left: none;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+.btn-info.btn-gradient {
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+    border: none;
+    border-radius: 0.5rem;
+    color: white;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-image 0.3s ease;
+}
+
+.btn-info.btn-gradient:hover {
+    background-image: linear-gradient(to right, #0072ff, #00c6ff);
+}
+
+.input-group-prepend .input-group-text {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group .form-control {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+
+
+.btn-icon {
+  /* Estilos básicos para os botões com ícone */
+  padding: 12px;
+  border-radius: 50%; /* Borda arredondada para criar um botão circular */
+}
+
+.btn-primary {
+  /* Cor de fundo para o botão Facebook */
+  background-color: #3b5998;
+  color: white;
+}
+
+.btn-light {
+  /* Cor de fundo para o botão Google */
+  background-color: #ffffff;
+  color: #757575;
+}
+
+.btn-dark {
+  /* Cor de fundo para o botão Apple */
+  background-color: #000000;
+  color: white;
+}
+
+.btn-info {
+  /* Cor de fundo para o botão Discord */
+  background-color: #7289da;
+  color: white;
+}
+
+.btn-gradient {
+  /* Estilo para o botão "Iniciar Sessão" com gradiente */
+  background-image: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-image 0.3s ease;
+}
+
+.btn-gradient:hover {
+  background-image: linear-gradient(to right, #0072ff, #00c6ff);
 }
 
 
