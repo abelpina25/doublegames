@@ -93,7 +93,7 @@
                     <input type="hidden" name="games[]" value="{{ $item->id }}"> <!-- Campo oculto com o ID do jogo -->
                     <input type="hidden" name="game_names[]" value="{{ $item->name }}">
                     <!-- Campo oculto com o nome do jogo -->
-                    <input type="hidden" name="prices[]" value="{{ $item->price }}">
+                    <input type="hidden" name="prices[]" value="{{ $item->qty }}">
                     <!-- Campo oculto com o preço do jogo -->
                 @endforeach
 

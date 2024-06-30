@@ -31,7 +31,6 @@ class CheckoutController extends Controller
         $prices = $request->input('prices');
         $name = $request->input('nome'); // Obtém o nome da fatura
         $address = $request->input('morada'); // Obtém o endereço da fatura
-
         // Itera sobre os jogos a serem comprados
         foreach ($games as $index => $gameId) {
             // Verifica se o jogo já foi pago pelo usuário
