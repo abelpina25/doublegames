@@ -1,232 +1,315 @@
-/* Estilos globais */
+/* Reset CSS */
 * {
-  font-family: 'Poppins', sans-serif; /* Define a fonte para todo o documento */
   margin: 0;
   padding: 0;
-  box-sizing: border-box; /* Garante que padding e border não aumentem o tamanho dos elementos */
+  box-sizing: border-box;
 }
 
-/* Estilos para o corpo da página */
+/* Global Styles */
 body {
-  min-height: 100vh; /* Garante que o corpo ocupe pelo menos toda a altura da tela */
-  background: url(imagens/imagem1.png) no-repeat; /* Imagem de fundo */
-  background-size: cover; /* Cubra toda a área do elemento */
-  background-position: center; /* Centraliza a imagem de fundo */
-  margin: 0; /* Remove margens padrão */
-  display: flex; /* Usa flexbox para layout */
-  flex-direction: column; /* Empilha elementos em coluna */
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  font-family: 'Nunito', sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Estilos para o cabeçalho */
+.container {
+  flex: 1;
+  padding-top: 120px;
+  padding-bottom: 60px;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+ 
+}
+
+/* Header */
 .header {
-  position: fixed; /* Fixa o cabeçalho no topo */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 100px; /* Espaçamento interno */
+  padding: 20px 100px;
   color: white;
   display: flex;
-  justify-content: space-between; /* Alinha itens à esquerda e à direita */
-  align-items: center; /* Alinha verticalmente ao centro */
-  z-index: 1000; /* Coloca o cabeçalho sobre outros elementos */
-  background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-/* Estilos para links na barra de navegação */
 .navbar a {
-  color: #fff; /* Cor do texto */
-  font-size: 18px; /* Tamanho da fonte */
+  color: #fff;
+  font-size: 22px;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-left: 80px !important; /* Espaçamento à esquerda */
+  padding-left: 80px !important;
 }
 
 .navbar a:hover {
-  color: white; /* Cor do texto ao passar o mouse */
+  color: white;
 }
 
-/* Estilos para o conteúdo principal */
-.container {
-  flex: 1; /* Ocupa o espaço restante */
-  padding-top: 120px; /* Espaçamento superior */
-  padding-bottom: 60px; /* Espaçamento inferior */
-  position: relative;
-  z-index: 1; /* Coloca sobre o fundo */
-}
-
-/* Estilos para o rodapé */
-.footer {
-  background-color: #212529; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  padding: 10px 20px; /* Espaçamento interno */
-  width: 100%;
-  text-align: center; /* Alinhamento central do texto */
-  position: relative; /* Posição relativa */
-  bottom: 0; /* Alinha ao fundo */
-  left: 0; /* Alinha à esquerda */
-}
-
-.footer-links a {
-  color: #fff; /* Cor dos links */
-  text-decoration: none; /* Sem sublinhado */
-  font-size: 14px; /* Tamanho da fonte */
-}
-
-.footer-links a:hover {
-  text-decoration: underline; /* Sublinhado ao passar o mouse */
-}
-
-.social-icons a {
-  color: white; /* Cor dos ícones sociais */
-  margin-right: 10px; /* Espaçamento entre ícones */
-  font-size: 20px; /* Tamanho dos ícones */
-}
-
-/* Estilos para a imagem de login */
-.login-image {
-  height: 100vh; /* Altura total da tela */
-  object-fit: cover; /* Ajuste da imagem */
-  width: 100%;
-}
-
-/* Estilos para quando não há produtos */
-.no-products {
-  min-height: calc(100vh - 180px); /* Altura mínima */
-  display: flex; /* Flexbox */
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  text-align: center; /* Alinhamento do texto */
-  color: #6c757d; /* Cor do texto */
-  font-size: 1.2rem; /* Tamanho da fonte */
-  padding: 20px; /* Espaçamento interno */
-}
-
-/* Estilos para a página de registro/login */
-body {
-  background-color: #f8f9fa; /* Cor de fundo */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte alternativa */
-}
-
+/* Card Styles */
 .card {
-  border: none; /* Sem borda */
-  border-radius: 0.75rem; /* Borda arredondada */
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff; /* Fundo branco para os cartões */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
 }
 
-.card-header {
-  border-radius: 0.75rem 0.75rem 0 0; /* Borda arredondada */
-  font-size: 1.25rem; /* Tamanho da fonte */
-  padding: 1rem; /* Espaçamento interno */
+.card:hover {
+  transform: translateY(-5px);
+}
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
 }
 
 .card-body {
-  padding: 2rem; /* Espaçamento interno */
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 1.5rem; /* Tamanho maior para o título do jogo */
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #256286; /* Cor mais suave para o texto */
+}
+
+/* Button Styles */
+.btn-info {
+  background-image: linear-gradient(to right, #00c6ff, #0072ff);
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  transition: background-image 0.3s ease;
+}
+
+.btn-info:hover {
+  background-image: linear-gradient(to right, #0072ff, #00c6ff);
+  color: white;
+}
+
+/* No Products Message */
+.no-products {
+  min-height: calc(100vh - 180px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #6c757d;
+  font-size: 1.2rem;
+  padding: 20px;
+}
+
+
+/* Footer */
+.footer {
+  background-color: #212529;
+  color: white;
+  padding: 15px 10px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-section,
+.site-description,
+.contact-info {
+  flex: 1;
+}
+
+.footer-section img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer-section p,
+.site-description p,
+.contact-info li {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.site-description h5,
+.contact-info h5 {
+  font-size: 20px;
+  color: #4393c9;
+}
+
+.contact-info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-info li {
+  margin-bottom: 10px;
+  color: #fff;
+  font-size: 16px;
+}
+
+.contact-info i {
+  margin-right: 10px;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.login-image {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
 }
 
 .form-control {
-  border-radius: 0.5rem; /* Borda arredondada */
+  border-radius: 0.5rem;
 }
 
 .btn-primary {
-  background-color: #1d9ce6; /* Cor de fundo */
-  border: none; /* Sem borda */
-  border-radius: 0.5rem; /* Borda arredondada */
-  padding: 0.5rem 1rem; /* Espaçamento interno */
-  font-size: 1rem; /* Tamanho da fonte */
-  transition: background-color 0.3s ease; /* Transição suave */
+  background-color: #1d9ce6;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+  background-color: #0056b3;
 }
 
 .invalid-feedback {
-  display: block; /* Mostra mensagem de erro */
-  font-size: 0.875rem; /* Tamanho da fonte */
+  display: block;
+  font-size: 0.875rem;
 }
 
 .form-group label i {
-  color: #7d7c6c; /* Cor do ícone */
-  margin-right: 0.5rem; /* Espaçamento à direita */
+  color: #7d7c6c;
+  margin-right: 0.5rem;
 }
 
-/* Melhorias específicas para o formulário de login */
 .input-group-text {
-  background-color: #007bff; /* Cor de fundo */
-  color: white; /* Cor do texto */
-  border: none; /* Sem borda */
-  border-radius: 0.5rem 0 0 0.5rem; /* Borda arredondada */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem 0 0 0.5rem;
 }
 
 .input-group .form-control {
-  border-left: none; /* Sem borda à esquerda */
-  border-radius: 0 0.5rem 0.5rem 0; /* Borda arredondada */
-}
-
-.btn-info.btn-gradient {
-  background-image: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente */
-  border: none; /* Sem borda */
-  border-radius: 0.5rem; /* Borda arredondada */
-  color: white; /* Cor do texto */
-  padding: 0.5rem 1rem; /* Espaçamento interno */
-  font-size: 1rem; /* Tamanho da fonte */
-  transition: background-image 0.3s ease; /* Transição suave */
-}
-
-.btn-info.btn-gradient:hover {
-  background-image: linear-gradient(to right, #0072ff, #00c6ff); /* Gradiente ao passar o mouse */
+  border-left: none;
+  border-radius: 0 0.5rem 0.5rem 0;
 }
 
 .input-group-prepend .input-group-text {
-  border-top-right-radius: 0; /* Borda arredondada */
-  border-bottom-right-radius: 0; /* Borda arredondada */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
-.input-group .form-control {
-  border-top-left-radius: 0; /* Borda arredondada */
-  border-bottom-left-radius: 0; /* Borda arredondada */
+.btn-warning .fa-upload {
+  margin-right: 5px;
 }
 
-/* Estilos para botões com ícones */
-.btn-icon {
-  padding: 12px; /* Espaçamento interno */
-  border-radius: 50%; /* Borda arredondada */
+.login-image {
+  height: 100vh;
+  object-fit: cover;
+  width: 100%;
 }
 
-.btn-primary {
-  background-color: #3b5998; /* Cor de fundo para Facebook */
-  color: white; /* Cor do texto para Facebook */
+.table {
+  margin-top: 50px; /* Espaçamento entre o título e a tabela */
+  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra suave */
 }
 
-.btn-light {
-  background-color: #ffffff; /* Cor de fundo para Google */
-  color: #757575; /* Cor do texto para Google */
+.table th {
+  background-color: #1d9ce6; /* Cor de fundo para cabeçalhos da tabela */
+  color: white;
 }
 
-.btn-dark {
-  background-color: #000000; /* Cor de fundo para Apple */
-  color: white; /* Cor do texto para Apple */
+.table-hover tbody tr:hover {
+  background-color: #f2f9fc; /* Cor de fundo ao passar o mouse nas linhas */
 }
 
-.btn-info {
-  background-color: #7289da; /* Cor de fundo para Discord */
-  color: white; /* Cor do texto para Discord */
+.table th,
+.table td {
+  vertical-align: middle; /* Alinhamento vertical no centro */
 }
 
-.btn-gradient {
-  background-image: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente para "Iniciar Sessão" */
-  border: none; /* Sem borda */
+/* Estilo para botão de remover */
+.btn-danger {
+  background-color: #dc3545;
   border-radius: 0.5rem; /* Borda arredondada */
-  color: white; /* Cor do texto */
-  padding: 0.5rem 1rem; /* Espaçamento interno */
-  font-size: 1rem; /* Tamanho da fonte */
-  transition: background-image 0.3s ease; /* Transição suave */
-}
-
-.btn-gradient:hover {
-  background-image: linear-gradient(to right, #0072ff, #00c6ff); /* Gradiente ao passar o mouse */
 }
 
 
+/* Estilo para o formulário de checkout */
+.checkout-form {
+  background-color: #fff; /* Cor de fundo */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin-top: 20px; /* Espaçamento entre a tabela e o formulário */
+}
 
+.checkout-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #0c0c0c; /* Cor para destacar o título */
+  text-align: center;
+  font-weight: bold;
+}
+
+.checkout-form .form-group {
+  margin-bottom: 20px; /* Espaçamento entre os grupos de formulário */
+}
+
+.checkout-form label {
+  color: #0c0c0c; /* Cor para o label */
+  font-weight: bold;
+}
+
+.checkout-form .form-control {
+  border-radius: 5px; /* Borda arredondada */
+}
+
+.checkout-form .btn-primary {
+  background-color: #1d9ce6;
+  border: none;
+  border-radius: 0.5rem; /* Borda arredondada */
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.checkout-form .btn-primary:hover {
+  background-color: #0056b3;
+}
 
