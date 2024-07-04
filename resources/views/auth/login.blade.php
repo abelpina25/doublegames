@@ -5,18 +5,6 @@
 <div class="container-fluid d-flex align-items-center justify-content-center" style="height: 100vh; background-color: #2c2c2c;">
     <div class="row w-100">
         <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-white">
-            <h2 class="mb-4">Iniciar Sessão</h2>
-            <div class="mb-3 d-flex justify-content-center">
-                <button class="btn btn-primary mx-1 btn-icon"><i class="fab fa-facebook-f"></i></button>
-                <button class="btn btn-light mx-1 btn-icon"><i class="fab fa-google"></i></button>
-                <button class="btn btn-dark mx-1 btn-icon"><i class="fab fa-apple"></i></button>
-                <button class="btn btn-info mx-1 btn-icon"><i class="fab fa-discord"></i></button>
-            </div>
-            <div class="w-100 d-flex justify-content-center align-items-center">
-                <hr class="w-25">
-                <span class="mx-2">ou</span>
-                <hr class="w-25">
-            </div>
             <form method="POST" action="{{ route('login') }}" class="w-75">
                 @csrf
                 <div class="mb-3">
@@ -40,17 +28,13 @@
                         <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                         <label class="form-check-label" for="remember">Lembrar de mim</label>
                     </div>
-                    @if (Route::has('password.request'))
-                    <a class="text-decoration-none text-white" href="{{ route('password.request') }}">Esqueceu sua senha?</a>
-                    @endif
                 </div>
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-info btn-gradient">
+                    <button type="submit" class="btn btn-info btn-gradient btn-lg">
                         <i class="fas fa-sign-in-alt me-2"></i> Iniciar Sessão
                     </button>
                 </div>
             </form>
-           
         </div>
         <div class="col-md-6 d-none d-md-block p-0">
             <img src="{{ asset('imagens/imagem1.png') }}" alt="Image" class="login-image">

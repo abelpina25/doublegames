@@ -2,5 +2,7 @@
 
 @section('content')
     @include('include.menu')
+
+    
 @endsection
 
