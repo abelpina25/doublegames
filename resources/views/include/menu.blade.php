@@ -1,36 +1,51 @@
-<!-- Estilos CSS -->
 <style>
-    /* Estilos para o menu dropdown */
-    .dropdown-menu {
-        background-color: #343a40;
-        /* Fundo escuro */
-        color: #fff;
-        /* Texto branco */
-    }
+   /* Estilos para o menu dropdown */
+.dropdown-menu {
+    background-color: #4393c9; /* Cor de fundo da nav-bar*/
+    color: #fff; /* Texto branco */
+}
 
-    /* Estilos para os itens do menu dropdown */
-    .dropdown-menu .dropdown-item {
-        color: #fff;
-        /* Texto branco */
-    }
+/* Estilos para os itens do menu dropdown */
+.dropdown-menu .dropdown-item {
+    color: #fff; /* Texto branco */
+}
 
-    /* Estilos para os itens do menu dropdown ao passar o mouse */
-    .dropdown-menu .dropdown-item:hover {
-        background-color: #495057;
-        /* Fundo levemente mais claro ao passar o mouse */
-        color: #fff;
-        /* Texto branco */
-    }
+/* Estilos para os itens do menu dropdown ao passar o mouse */
+.dropdown-menu .dropdown-item:hover {
+    background-color: #5fade0; /* Fundo levemente mais claro ao passar o mouse */
+    color: #fff; /* Texto branco */
+}
 
-    /* Estilos para ícones */
-    i {
-        color: #fff;
-        /* Define a cor do texto como branco */
-    }
+/* Estilos para ícones usando Font Awesome */
+.navbar-nav .nav-link i {
+    margin-right: 8px; /* Espaçamento à direita do ícone */
+}
+
+/* Estilos para a navbar personalizada */
+.custom-navbar {
+    background-color: #4284af; /* Cor de fundo da navbar */
+}
+
+/* Estilo para o ícone e o texto da navbar */
+.navbar-nav .nav-link {
+    display: flex;
+    align-items: center;
+    color: white; /* Cor do texto da navbar */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Transição suave para o efeito de hover */
+}
+
+/* Ajuste para o botão do dropdown "Perfil" */
+.navbar-nav .nav-link.dropdown-toggle {
+    color: white; /* Texto sempre em branco */
+}
+
+.navbar-nav .nav-link.dropdown-toggle:hover {
+    color: white; /* Texto sempre em branco mesmo ao passar o mouse */
+}
 </style>
 
 <!-- Barra de navegação -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light custom-navbar">
     <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
@@ -48,30 +63,29 @@
                 <!-- Links para usuários não autenticados -->
                 @guest
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Registar</a>
+                        <a class="nav-link" href="{{ route('register') }}"><i class="fas fa-user-plus"></i> Registar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
+                        <a class="nav-link" href="{{ route('login') }}"><i class="fas fa-sign-in-alt"></i> Login</a>
                     </li>
                 @endguest
                 <!-- Links para todos os usuários -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}">Sobre Nós</a>
+                    <a class="nav-link" href="{{ route('about') }}"><i class="fas fa-info-circle"></i> Sobre Nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('shop') }}">Loja</a>
+                    <a class="nav-link" href="{{ route('shop') }}"><i class="fas fa-shopping-bag"></i> Loja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">Contato</a>
+                    <a class="nav-link" href="{{ route('contact') }}"><i class="fas fa-envelope"></i> Contato</a>
                 </li>
             </ul>
             <!-- Dropdown para usuários autenticados -->
             @auth
-
                 <div class="btn-group p-5">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
-                        <i class="fa fa-user"></i>
+                        <i class="fas fa-user"></i> Perfil
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
                         @if (Auth::user()->name == 'admin')
@@ -99,7 +113,7 @@
                     <div class="btn-group">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="fa-solid fa-cart-shopping"></i>
+                            <i class="fas fa-shopping-cart"></i> Carrinho
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end dropdown-menu-lg-end">
                             <!-- listar items adicionados ao carrinho -->
