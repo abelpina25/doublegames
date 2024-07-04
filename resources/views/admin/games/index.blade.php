@@ -1,6 +1,5 @@
 @extends('layouts.app') <!-- Estende o layout padrão 'app' -->
 
-
 @section('content') <!-- Inicia a seção de conteúdo -->
     @include('include.menu') <!-- Inclui o menu na página  -->
 
@@ -16,10 +15,10 @@
 
         @if (count($games) > 0)
             <!-- Verifica se existem jogos para exibir -->
-            <table class="table table-striped">
+            <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">#</th> <!-- Cabeçalho da coluna ID -->
+                        <th scope="col">Id</th> <!-- Cabeçalho da coluna ID -->
                         <th scope="col">Imagem</th> <!-- Cabeçalho da coluna Imagem -->
                         <th scope="col">Nome</th> <!-- Cabeçalho da coluna Nome -->
                         <th scope="col">Preço</th> <!-- Cabeçalho da coluna Preço -->
@@ -31,8 +30,7 @@
                         <!-- Loop pelos jogos -->
                         <tr>
                             <th scope="row">{{ $game->id }}</th> <!-- ID do jogo -->
-                            <td><img src="{{ asset('storage/' . $game->image_path) }}" alt="{{ $game->name }}"
-                                    width="50"></td> <!-- Imagem do jogo -->
+                            <td><img src="{{ asset('storage/' . $game->image_path) }}" alt="{{ $game->name }}" class="img-thumbnail" width="100"></td> <!-- Imagem do jogo -->
                             <td>{{ $game->name }}</td> <!-- Nome do jogo -->
                             <td>{{ $game->price }}</td> <!-- Preço do jogo -->
 
@@ -44,12 +42,11 @@
                                 </a>
                                 <!-- Botão para editar o jogo -->
                                 <a href="{{ route('admin.games.edit', $game->id) }}" class="btn btn-warning btn-sm">
-                                    <i class="fa fa-pencil-square fa-2x"></i>
+                                    <i class="fa fa-pencil-square fa-2x" style="color: white;"></i>
                                     Editar
                                 </a>
                                 <!-- Formulário para excluir o jogo -->
-                                <form action="{{ route('admin.games.destroy', $game->id) }}" method="POST"
-                                    class="d-inline">
+                                <form action="{{ route('admin.games.destroy', $game->id) }}" method="POST" class="d-inline">
                                     @csrf <!-- Token CSRF -->
                                     @method('DELETE') <!-- Método de requisição -->
                                     <!-- Botão para excluir o jogo -->
@@ -69,3 +66,4 @@
         @endif
     </div>
 @endsection
+
