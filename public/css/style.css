@@ -8,7 +8,7 @@
 /* Global Styles */
 body {
   min-height: 100vh;
-  background-color: #f8f9fa; /* Cor de fundo geral */
+  background-color: #6019a7; /* Cor de fundo geral */
   font-family: 'Nunito', sans-serif; /* Fonte padrão */
   display: flex;
   flex-direction: column;
@@ -145,7 +145,8 @@ h1 {
 
 .footer-section p,
 .site-description p,
-.contact-info li {
+.contact-info li,
+.location-info li {
   margin-top: 10px; /* Margem superior */
   font-size: 16px; /* Tamanho da fonte */
 }

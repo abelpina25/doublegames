@@ -23,7 +23,7 @@
                             e segurança em todas as transações.</p>
                     </div>
                     <div class="col-md-6 text-center">
-                        <i class="fas fa-vision fa-3x mb-3"></i>
+                    <i class="fas fa-eye fa-3x mb-3"></i>
                         <h2>A Nossa Visão</h2>
                         <p>Ser a plataforma líder mundial em venda de jogos digitais, reconhecida pela nossa inovação, integridade e excelência no serviço ao cliente.</p>
                     </div>
@@ -67,53 +67,60 @@
         </div>
     </div>
 
-    <!-- Rodapé -->
-    <footer class="footer mt-auto bg-dark text-white py-3">
-        <div class="container">
-            <div class="row justify-content-between">
-                <!-- Logo e Redes Sociais -->
-                <div class="col-md-3 mb-2">
-                    <div class="footer-section">
-                        <img src="{{ asset('imagens/logotipo.png') }}" alt="Trustpilot logo" width="150" height="auto">
-                        <div class="social-icons">
-                            <a href="#"><i class="fab fa-facebook"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-tiktok"></i></a>
-                        </div>
-                    </div>     
-                </div>
-                <!-- Links Importantes -->
-                <div class="col-md-3 mb-2">
-                    <div class="footer-section">
-                        <h5>Links Importantes</h5>
-                        <ul class="list-unstyled important-links">
-                            <li><a href="{{ route('home') }}">Inicio</a></li>
-                            <li><a href="{{ route('about') }}">Sobre Nós</a></li>
-                            <li><a href="{{ route('contact') }}">Contacte-nos</a></li>
-                        </ul>
+<!-- Rodapé -->
+<footer class="footer mt-auto bg-dark text-white py-3">
+    <div class="container">
+        <div class="row justify-content-between">
+            <!-- Logo e Redes Sociais -->
+            <div class="col-md-3 mb-2">
+                <div class="footer-section">
+                    <img src="{{ asset('imagens/logotipo.png') }}" alt="Trustpilot logo" width="150" height="auto">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
                     </div>
-                </div>
-                <!-- Texto do site -->
-                <div class="col-md-3 mb-2 site-description">
-                    <h5>Sobre</h5>
-                    <p>
-                        A Double A Games é dedicada a oferecer uma vasta seleção de jogos de qualidade a preços acessíveis. 
-                        Nosso compromisso é proporcionar uma experiência de compra única, onde todos os gamers encontram o que procuram, 
-                        seja para diversão casual ou desafios intensos.
-                    </p>
-                </div>
-                <!-- Seção de Contato -->
-                <div class="col-md-3 mb-2 contact-info">
-                    <h5>Contato</h5>
-                    <ul class="list-unstyled">
+                </div>     
+            </div>
+            <!-- Texto do site -->
+            <div class="col-md-3 mb-2 site-description">
+                <h5>Sobre</h5>
+                <p>
+                    A Double A Games é dedicada a oferecer uma vasta seleção de jogos de qualidade a preços acessíveis. 
+                    Nosso compromisso é proporcionar uma experiência de compra única, onde todos os gamers encontram o que procuram, 
+                    seja para diversão casual ou desafios intensos.
+                </p>
+            </div>
+            <!-- Localização -->
+            <div class="col-md-3 mb-2">
+                <div class="footer-section">
+                    <h5>Localização</h5>
+                    <ul class="list-unstyled location-info">
                         <li><i class="fas fa-map-marker-alt"></i> Portugal, Lisboa, Pontinha</li>
-                        <li><i class="fas fa-envelope"></i> DoubleAGames@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Rua Augusta</li>
                     </ul>
                 </div>
             </div>
+            <!-- Seção de Contato -->
+            <div class="col-md-3 mb-2 contact-info">
+                <h5>Contato</h5>
+                <ul class="list-unstyled">
+                    <li><i class="fas fa-envelope"></i> <strong>E-mail:</strong> DoubleAGames@gmail.com</li>
+                    <li class="fs-5"><i class="fas fa-phone"></i> <strong>Telefone:</strong> +92 3162859445</li>
+                    <li><a href="{{ route('contact') }}"><strong>Para mais:</strong> Contacte-nos</a></li>
+                </ul>
+            </div>
         </div>
-    </footer>
+        <!-- Copyright -->
+        <div class="row">
+            <div class="col-12 text-center mt-3">
+                <p>&copy; 2024 Alecsandru & Abel | Double A Games. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
 @endsection
 
 

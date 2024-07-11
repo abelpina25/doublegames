@@ -8,7 +8,7 @@
 
         @if (session('success'))
             <!-- Verifica se há uma mensagem de sucesso na sessão -->
-            <div class="alert alert-success"> <!-- Exibe a mensagem de sucesso -->
+            <div class="alert alert-success text-center"> <!-- Exibe a mensagem de sucesso -->
                 {{ session('success') }}
             </div>
         @endif

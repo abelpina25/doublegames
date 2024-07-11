@@ -10,7 +10,7 @@
         
         <!-- Verifica se existe uma mensagem de sessão e exibe -->
          @if (session('message')) 
-            <div class="alert alert-success"> 
+            <div class="alert alert-success text-center"> 
                 {{ session('message') }} 
             </div> 
          @endif 
