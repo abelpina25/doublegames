@@ -26,7 +26,7 @@ class CartController extends Controller
         // Verifica se o jogo já está no carrinho
         foreach ($items as $item) {
             if ($item->id == $request->id) {
-                return redirect()->route('cart.index')->with('message', 'jogo já se encontra no carrinho.');
+                return redirect()->route('cart.index')->with('message', 'Jogo já se encontra no carrinho');
             }
         }
 
@@ -44,7 +44,7 @@ class CartController extends Controller
         );
 
         // Redireciona de volta para a página de compras com uma mensagem
-        return redirect()->route('shop')->with('message', 'jogo adicionado ao carrinho.');;
+        return redirect()->route('shop')->with('message', 'Jogo adicionado ao carrinho');;
     }
 
     // Método para remover um item do carrinho

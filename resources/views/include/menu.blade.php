@@ -1,47 +1,47 @@
 <style>
-   /* Estilos para o menu dropdown */
-.dropdown-menu {
-    background-color: #4393c9; /* Cor de fundo da nav-bar*/
-    color: #fff; /* Texto branco */
-}
+    /* Estilos para o menu dropdown */
+    .dropdown-menu {
+        background-color: #4393c9; /* Cor de fundo para o menu dropdown*/
+        color: #fff; /* Texto branco */
+    }
 
-/* Estilos para os itens do menu dropdown */
-.dropdown-menu .dropdown-item {
-    color: #fff; /* Texto branco */
-}
+    /* Estilos para os itens do menu dropdown */
+    .dropdown-menu .dropdown-item {
+        color: #fff; /* Texto branco */
+    }
 
-/* Estilos para os itens do menu dropdown ao passar o mouse */
-.dropdown-menu .dropdown-item:hover {
-    background-color: #5fade0; /* Fundo levemente mais claro ao passar o mouse */
-    color: #fff; /* Texto branco */
-}
+    /* Estilos para os itens do menu dropdown ao passar o mouse */
+    .dropdown-menu .dropdown-item:hover {
+        background-color: #5fade0; /* Fundo levemente mais claro ao passar o mouse */
+        color: #fff; /* Texto branco */
+    }
 
-/* Estilos para ícones usando Font Awesome */
-.navbar-nav .nav-link i {
-    margin-right: 8px; /* Espaçamento à direita do ícone */
-}
+    /* Estilos para ícones usando Font Awesome */
+    .navbar-nav .nav-link i {
+        margin-right: 8px; /* Espaçamento à direita do ícone */
+    }
 
-/* Estilos para a navbar personalizada */
-.custom-navbar {
-    background-color: #4284af; /* Cor de fundo da navbar */
-}
+    /* Estilos para a navbar personalizada */
+    .custom-navbar {
+        background-color: #4393c9; /* Cor de fundo da navbar */
+    }
 
-/* Estilo para o ícone e o texto da navbar */
-.navbar-nav .nav-link {
-    display: flex;
-    align-items: center;
-    color: white; /* Cor do texto da navbar */
-    transition: color 0.3s ease, background-color 0.3s ease; /* Transição suave para o efeito de hover */
-}
+    /* Estilo para o ícone e o texto da navbar */
+    .navbar-nav .nav-link {
+        display: flex;
+        align-items: center;
+        color: white; /* Cor do texto da navbar */
+        transition: color 0.3s ease, background-color 0.3s ease; /* Transição suave para o efeito de hover */
+    }
 
-/* Ajuste para o botão do dropdown "Perfil" */
-.navbar-nav .nav-link.dropdown-toggle {
-    color: white; /* Texto sempre em branco */
-}
+    /* Ajuste para o botão do dropdown "Perfil" */
+    .navbar-nav .nav-link.dropdown-toggle {
+        color: white; /* Texto sempre em branco */
+    }
 
-.navbar-nav .nav-link.dropdown-toggle:hover {
-    color: white; /* Texto sempre em branco mesmo ao passar o mouse */
-}
+    .navbar-nav .nav-link.dropdown-toggle:hover {
+        color: white; /* Texto sempre em branco mesmo ao passar o mouse */
+    }
 </style>
 
 <!-- Barra de navegação -->
@@ -71,10 +71,10 @@
                 @endguest
                 <!-- Links para todos os usuários -->
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('about') }}"><i class="fas fa-info-circle"></i> Sobre Nós</a>
+                    <a class="nav-link" href="{{ route('shop') }}"><i class="fas fa-gamepad"></i> Loja</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('shop') }}"><i class="fas fa-shopping-bag"></i> Loja</a>
+                    <a class="nav-link" href="{{ route('about') }}"><i class="fas fa-info-circle"></i> Sobre Nós</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contact') }}"><i class="fas fa-envelope"></i> Contato</a>

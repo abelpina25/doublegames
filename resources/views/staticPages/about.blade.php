@@ -1,45 +1,119 @@
-@extends('layouts.app')
+@extends('layouts.app')  
 
 @section('content')
-    @include('include.menu')
-    <div class="container py-5"> <!-- Container Bootstrap para manter o conteúdo centralizado e responsivo -->
-        <h1 class="text-center mb-4">Sobre Nós</h1> <!-- Título centralizado -->
+    @include('include.menu')  
 
-        <div class="row"> <!-- Inicia uma nova linha -->
-            <div class="col-md-6"> <!-- Define uma coluna com metade da largura em dispositivos de médio porte e acima -->
-                <h2>A Nossa Missão</h2> <!-- Título da seção -->
-                <p>A nossa missão é proporcionar a melhor experiência de compra de jogos online para os nossos utilizadores.
-                    Pretendemos oferecer uma ampla variedade de jogos de alta qualidade, garantindo facilidade de utilização
-                    e segurança em todas as transações.</p> <!-- Descrição da missão -->
-            </div>
-            <div class="col-md-6"> <!-- Define uma coluna com metade da largura em dispositivos de médio porte e acima -->
-                <h2>A Nossa História</h2> <!-- Título da seção -->
-                <p>A nossa comunidade de venda de jogos foi fundada em 2024 por um grupo de entusiastas de
-                    jogos. Desde então, cresceu e tornou-se uma das principais plataformas para compra e venda de jogos
-                    digitais em todo o mundo.</p> <!-- Descrição da história -->
-            </div>
-        </div>
+    <div class="d-flex flex-column min-vh-100"> <!-- Wrapper principal da página com flexbox -->
+        <div class="bg-primary text-white py-5 flex-grow-1"> <!-- Div com fundo azul primário, texto branco e crescimento flexível -->
+            <div class="container">
+                <div class="row mb-5">
+                    <div class="col-md-12 text-center">
+                        <p class="display-6">Bem-vindo à nossa comunidade!</p>
+                        <br>
+                        <p class="h5 mb-4">Estamos comprometidos em fornecer a melhor experiência de compra de jogos online.</p>
+                    </div>
+                </div>
 
-        <div class="row mt-5"> <!-- Inicia uma nova linha com um espaço superior de 5 unidades -->
-            <div class="col-md-6"> <!-- Define uma coluna com metade da largura em dispositivos de médio porte e acima -->
-                <h2>Valores</h2> <!-- Título da seção -->
-                <ul>
-                    <li><strong>Integridade:</strong> As nossas transações são seguras e transparentes.</li>
-                    <!-- Valor: Integridade -->
-                    <li><strong>Diversidade:</strong> Oferecemos uma ampla variedade de jogos para satisfazer todos os
-                        gostos.</li> <!-- Valor: Diversidade -->
-                    <li><strong>Inovação:</strong> Estamos sempre à procura de maneiras de melhorar e oferecer novas
-                        experiências aos nossos utilizadores.</li> <!-- Valor: Inovação -->
-                    <li><strong>Comunidade:</strong> Valorizamos a comunidade de jogadores e estamos comprometidos em
-                        construir um ambiente inclusivo e acolhedor.</li> <!-- Valor: Comunidade -->
-                </ul>
-            </div>
-            <div class="col-md-6"> <!-- Define uma coluna com metade da largura em dispositivos de médio porte e acima -->
-                <h2>Equipa</h2> <!-- Título da seção -->
-                <p>A nossa equipa é composta por apaixonados por jogos, desenvolvedores, designers e profissionais de apoio
-                    ao cliente dedicados a oferecer a melhor experiência possível para os nossos utilizadores.</p>
-                <!-- Descrição da equipa -->
+                <div class="row mb-5">
+                    <div class="col-md-6 text-center">
+                        <i class="fas fa-bullseye fa-3x mb-3"></i>
+                        <h2>A Nossa Missão</h2>
+                        <p>A nossa missão é proporcionar a melhor experiência de compra de jogos online para os nossos utilizadores.
+                            Pretendemos oferecer uma ampla variedade de jogos de alta qualidade, garantindo facilidade de utilização
+                            e segurança em todas as transações.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <i class="fas fa-vision fa-3x mb-3"></i>
+                        <h2>A Nossa Visão</h2>
+                        <p>Ser a plataforma líder mundial em venda de jogos digitais, reconhecida pela nossa inovação, integridade e excelência no serviço ao cliente.</p>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-md-6 text-center">
+                        <i class="fas fa-history fa-3x mb-3"></i>
+                        <h2>A Nossa História</h2>
+                        <p>A nossa comunidade de venda de jogos foi fundada em 2024 por um grupo de entusiastas de
+                            jogos. Desde então, crescemos e nos tornamos uma das principais plataformas para compra e venda de jogos
+                            digitais em todo o mundo.</p>
+                    </div>
+                    <div class="col-md-6 text-center">
+                        <i class="fas fa-users fa-3x mb-3"></i>
+                        <h2>A Nossa Equipe</h2>
+                        <p>Conheça as pessoas por trás do nosso sucesso. Nossa equipe dedicada trabalha arduamente para oferecer a melhor experiência possível para você.</p>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col-md-12">
+                        <h2>Valores</h2>
+                        <ul>
+                            <li><strong>Integridade:</strong> As nossas transações são seguras e transparentes.</li>
+                            <li><strong>Diversidade:</strong> Oferecemos uma ampla variedade de jogos para satisfazer todos os gostos.</li>
+                            <li><strong>Inovação:</strong> Estamos sempre à procura de maneiras de melhorar e oferecer novas experiências aos nossos utilizadores.</li>
+                            <li><strong>Comunidade:</strong> Valorizamos a comunidade de jogadores e estamos comprometidos em construir um ambiente inclusivo e acolhedor.</li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+                <div class="row mb-5">
+                    <div class="col-md-12 text-center">
+                        <h2>Entre em Contato</h2>
+                        <p>Gostaríamos de ouvir de você! Sinta-se à vontade para nos contatar através das nossas redes sociais ou por email.</p>
+                        <a href="{{ route('contact') }}" class="btn btn-light">Contato</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+
+    <!-- Rodapé -->
+    <footer class="footer mt-auto bg-dark text-white py-3">
+        <div class="container">
+            <div class="row justify-content-between">
+                <!-- Logo e Redes Sociais -->
+                <div class="col-md-3 mb-2">
+                    <div class="footer-section">
+                        <img src="{{ asset('imagens/logotipo.png') }}" alt="Trustpilot logo" width="150" height="auto">
+                        <div class="social-icons">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>     
+                </div>
+                <!-- Links Importantes -->
+                <div class="col-md-3 mb-2">
+                    <div class="footer-section">
+                        <h5>Links Importantes</h5>
+                        <ul class="list-unstyled important-links">
+                            <li><a href="{{ route('home') }}">Inicio</a></li>
+                            <li><a href="{{ route('about') }}">Sobre Nós</a></li>
+                            <li><a href="{{ route('contact') }}">Contacte-nos</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Texto do site -->
+                <div class="col-md-3 mb-2 site-description">
+                    <h5>Sobre</h5>
+                    <p>
+                        A Double A Games é dedicada a oferecer uma vasta seleção de jogos de qualidade a preços acessíveis. 
+                        Nosso compromisso é proporcionar uma experiência de compra única, onde todos os gamers encontram o que procuram, 
+                        seja para diversão casual ou desafios intensos.
+                    </p>
+                </div>
+                <!-- Seção de Contato -->
+                <div class="col-md-3 mb-2 contact-info">
+                    <h5>Contato</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-map-marker-alt"></i> Portugal, Lisboa, Pontinha</li>
+                        <li><i class="fas fa-envelope"></i> DoubleAGames@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
 @endsection
+
+

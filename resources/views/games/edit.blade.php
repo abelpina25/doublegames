@@ -3,22 +3,22 @@
 @section('content')
     @include('include.menu') <!-- Inclui o menu -->
 
-    <div class="container mt-5 d-flex justify-content-center"> <!-- Container com margem superior -->
+    <div class="container mt-5 d-flex justify-content-center"> <!-- Container com margem superior e centralizado -->
         <div class="form-container card shadow col-md-8">
-            <div class="card-header text-center bg-warning text-white"> <!-- Fundo amarelo e texto branco -->
+            <div class="card-header text-center bg-warning text-white"> <!-- Cabeçalho do cartão com fundo amarelo e texto branco -->
                 <h2>Editar Jogo</h2> <!-- Título da página -->
             </div>
             <div class="card-body">
                 @if (session('success'))
-                    <!-- Verifica se há uma mensagem de sucesso na sessão -->
-                    <div class="alert alert-success"> <!-- Exibe a mensagem de sucesso -->
+                    <!-- Exibe mensagem de sucesso se houver -->
+                    <div class="alert alert-success">
                         {{ session('success') }}
                     </div>
                 @endif
 
                 <form action="{{ route('admin.games.update', $game->id) }}" method="POST" enctype="multipart/form-data">
                     @csrf <!-- Token CSRF para segurança -->
-                    @method('PUT') <!-- Define o método HTTP como PUT para atualização -->
+                    @method('PUT') <!-- Método HTTP PUT para atualização -->
                     <div class="form-group mb-3">
                         <label for="name" class="form-label">
                             <i class="fas fa-gamepad"></i> Nome do Jogo
