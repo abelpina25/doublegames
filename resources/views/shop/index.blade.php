@@ -25,7 +25,10 @@
                                         <input type="hidden" name="id" value="{{ $game->id }}">
                                         <input type="hidden" name="name" value="{{ $game->name }}">
                                         <input type="hidden" name="price" value="{{ $game->price }}">
+                                        @if (Auth::user()->name == 'admin')
+                                        @else
                                         <button type="submit" class="btn btn-info w-100">Adicionar ao Carrinho</button>
+                                    @endif
                                     </form>
                                 @endauth
                             </div>
