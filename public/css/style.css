@@ -8,23 +8,22 @@
 /* Global Styles */
 body {
   min-height: 100vh;
-  background-color: #f8f9fa;
-  font-family: 'Nunito', sans-serif;
+  background-color: #f8f9fa; /* Cor de fundo geral */
+  font-family: 'Nunito', sans-serif; /* Fonte padrão */
   display: flex;
   flex-direction: column;
 }
 
 .container {
   flex: 1;
-  padding-top: 120px;
-  padding-bottom: 60px;
+  padding-top: 120px; /* Espaçamento no topo */
+  padding-bottom: 60px; /* Espaçamento na base */
 }
 
 h1 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
- 
+  font-size: 2.5rem; /* Tamanho do título principal */
+  margin-bottom: 2rem; /* Margem inferior */
+  text-align: center; /* Alinhamento central */
 }
 
 /* Header */
@@ -33,283 +32,217 @@ h1 {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 20px 100px;
-  color: white;
+  padding: 20px 100px; /* Espaçamento interno */
+  color: white; /* Cor do texto */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: space-between; /* Distribuição do conteúdo */
+  align-items: center; /* Alinhamento vertical */
+  z-index: 1000; /* Z-index para sobreposição */
+  background-color: rgba(0, 0, 0, 0.7); /* Cor de fundo com transparência */
 }
 
 .navbar a {
-  color: #fff;
-  font-size: 22px;
+  color: #fff; /* Cor do texto */
+  font-size: 22px; /* Tamanho da fonte */
 }
 
 .navbar-expand-lg .navbar-nav .nav-link {
-  padding-left: 80px !important;
+  padding-left: 80px !important; /* Espaçamento do link no menu */
 }
 
 .navbar a:hover {
-  color: white;
+  color: white; /* Cor do texto ao passar o mouse */
 }
 
 /* Card Styles */
 .card {
-  border: none;
-  border-radius: 15px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none; /* Sem borda */
+  border-radius: 15px; /* Raio da borda */
+  overflow: hidden; /* Ocultar conteúdo que excede */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transições de animação */
   background-color: #ffffff; /* Fundo branco para os cartões */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
 }
 
 .card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
 }
+
 .card-img-top {
-  height: 180px;
-  object-fit: cover;
+  height: 180px; /* Altura da imagem do cartão */
+  object-fit: cover; /* Ajuste da imagem */
 }
 
 .card-body {
-  padding: 1.5rem;
+  padding: 1.5rem; /* Espaçamento interno */
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: column; /* Layout em coluna */
+  justify-content: space-between; /* Espaço entre os elementos */
 }
 
 .card-title {
-  font-size: 1.5rem; /* Tamanho maior para o título do jogo */
-  font-weight: bold;
+  font-size: 1.5rem; /* Tamanho do título do cartão */
+  font-weight: bold; /* Negrito */
+  color: #0072ff; /* Cor do título */
 }
 
 .card-text {
-  font-size: 1rem;
-  color: #256286; /* Cor mais suave para o texto */
+  font-size: 1rem; /* Tamanho do texto do cartão */
+  color: #256286; /* Cor do texto */
 }
 
 /* Button Styles */
-.btn-info {
-  background-image: linear-gradient(to right, #00c6ff, #0072ff);
-  border: none;
-  border-radius: 0.5rem;
-  color: white;
-  padding: 0.5rem 1rem;
-  font-size: 2rem;
-  transition: background-image 0.3s ease;
+.btn-info,
+.btn-cta {
+  background-image: linear-gradient(to right, #00c6ff, #0072ff); /* Gradiente de cores */
+  border: none; /* Sem borda */
+  border-radius: 0.5rem; /* Raio da borda */
+  color: white !important; /* Texto em branco, importante para forçar a prioridade */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  text-transform: uppercase; /* Transformação para maiúsculas */
+  transition: background-image 0.3s ease, transform 0.3s ease; /* Transições de animação */
+  display: inline-block; /* Exibição em bloco */
 }
 
-.btn-info:hover {
-  background-image: linear-gradient(to right, #0072ff, #00c6ff);
-  color: white;
+.btn-info:hover,
+.btn-cta:hover {
+  background-image: linear-gradient(to right, #0072ff, #00c6ff); /* Gradiente alterado ao passar o mouse */
+  color: white !important; /* Texto em branco ao passar o mouse */
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
 /* No Products Message */
 .no-products {
-  min-height: calc(100vh - 180px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #6c757d;
-  font-size: 1.2rem;
-  padding: 20px;
+  min-height: calc(100vh - 180px); /* Altura mínima */
+  display: flex; /* Layout flexível */
+  justify-content: center; /* Centralizar horizontalmente */
+  align-items: center; /* Centralizar verticalmente */
+  text-align: center; /* Alinhamento central */
+  color: #6c757d; /* Cor do texto */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  padding: 20px; /* Espaçamento interno */
 }
-
 
 /* Footer */
 .footer {
-  background-color: #212529;
-  color: white;
-  padding: 15px 10px;
-  width: 100%;
-  text-align: center;
-  position: relative;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.footer-section,
-.site-description,
-.contact-info {
-  flex: 1;
+  background-color: #212529; /* Cor de fundo */
+  color: white; /* Cor do texto */
+  padding: 15px; /* Espaçamento interno */
+  width: 100%; /* Largura total */
+  text-align: center; /* Alinhamento central */
+  display: flex; /* Layout flexível */
+  justify-content: space-between; /* Distribuição do conteúdo */
+  align-items: center; /* Alinhamento vertical */
 }
 
 .footer-section img {
-  max-width: 150px;
-  height: auto;
+  max-width: 150px; /* Largura máxima da imagem */
+  height: auto; /* Altura automática */
 }
 
 .footer-section p,
 .site-description p,
 .contact-info li {
-  margin-top: 10px;
-  font-size: 16px;
+  margin-top: 10px; /* Margem superior */
+  font-size: 16px; /* Tamanho da fonte */
 }
 
 .site-description h5,
 .contact-info h5 {
-  font-size: 20px;
-  color: #4393c9;
+  font-size: 20px; /* Tamanho do título */
+  color: #4393c9; /* Cor do título */
+}
+
+.footer h5 {
+  font-size: 1.25rem; /* Tamanho do título */
+  margin-bottom: 1rem; /* Margem inferior */
+  color: #007bff; /* Cor do título */
+}
+
+.footer ul {
+  padding: 0; /* Sem preenchimento */
+  list-style: none; /* Sem marcadores de lista */
+}
+
+.footer ul li {
+  margin-bottom: 0.5rem; /* Margem inferior */
+}
+
+.footer ul li a {
+  color: white; /* Cor do texto */
+  text-decoration: none; /* Sem decoração de link */
+  font-size: 20px; /* Tamanho da fonte */
+}
+
+.footer ul li a:hover {
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
 }
 
 .contact-info {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+  list-style: none; /* Sem marcadores de lista */
+  padding: 0; /* Sem preenchimento */
+  margin: 0; /* Sem margens */
 }
 
 .contact-info li {
-  margin-bottom: 10px;
-  color: #fff;
-  font-size: 16px;
+  margin-bottom: 10px; /* Margem inferior */
+  color: #fff; /* Cor do texto */
+  font-size: 16px; /* Tamanho da fonte */
 }
 
 .contact-info i {
-  margin-right: 10px;
+  margin-right: 10px; /* Margem à direita */
 }
 
 .social-icons {
-  margin-top: 10px;
+  margin-top: 15px; /* Margem superior */
 }
 
 .social-icons a {
-  color: white;
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-.login-image {
-  height: 100vh;
-  object-fit: cover;
-  width: 100%;
+  color: white; /* Cor do ícone */
+  margin-right: 10px; /* Margem à direita */
+  font-size: 25px; /* Tamanho do ícone */
+  margin-top: 10px; /* Margem superior */
 }
 
 .form-control {
-  border-radius: 0.5rem;
+  border-radius: 0.5rem; /* Raio da borda */
 }
 
 .btn-primary {
-  background-color: #1d9ce6;
-  border: none;
-  border-radius: 0.5rem;
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
+  background-color: #1d9ce6; /* Cor de fundo */
+  border: none; /* Sem borda */
+  border-radius: 0.5rem; /* Raio da borda */
+  padding: 0.5rem 1rem; /* Espaçamento interno */
+  font-size: 1rem; /* Tamanho da fonte */
+  transition: background-color 0.3s ease; /* Transição de animação */
 }
 
 .btn-primary:hover {
-  background-color: #0056b3;
+  background-color: #0056b3; /* Cor de fundo alterada ao passar o mouse */
 }
 
-.invalid-feedback {
-  display: block;
-  font-size: 0.875rem;
+/* Game Card Hover Effect */
+.game-card:hover .card-img-top {
+  transform: scale(1.1); /* Efeito de escala ao passar o mouse */
 }
 
-.form-group label i {
-  color: #7d7c6c;
-  margin-right: 0.5rem;
+.game-card .card-img-top {
+  transition: transform 0.3s ease; /* Transição de animação */
 }
 
-.input-group-text {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 0.5rem 0 0 0.5rem;
+.testimonial-card {
+  background-color: #f8f9fa; /* Cor de fundo */
+  border-left: 4px solid #1d9ce6; /* Borda lateral */
+  border-radius: 0.5rem; /* Raio da borda */
+  padding: 1.5rem; /* Espaçamento interno */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transições de animação */
 }
 
-.input-group .form-control {
-  border-left: none;
-  border-radius: 0 0.5rem 0.5rem 0;
+.testimonial-card:hover {
+  background-color: #e9ecef; /* Cor de fundo alterada ao passar o mouse */
+  transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
 }
-
-.input-group-prepend .input-group-text {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-
-.btn-warning .fa-upload {
-  margin-right: 5px;
-}
-
-.login-image {
-  height: 100vh;
-  object-fit: cover;
-  width: 100%;
-}
-
-.table {
-  margin-top: 50px; /* Espaçamento entre o título e a tabela */
-  box-shadow: 0 0 20px rgba(0,0,0,0.1); /* Sombra suave */
-}
-
-.table th {
-  background-color: #1d9ce6; /* Cor de fundo para cabeçalhos da tabela */
-  color: white;
-}
-
-.table-hover tbody tr:hover {
-  background-color: #f2f9fc; /* Cor de fundo ao passar o mouse nas linhas */
-}
-
-.table th,
-.table td {
-  vertical-align: middle; /* Alinhamento vertical no centro */
-}
-
-/* Estilo para botão de remover */
-.btn-danger {
-  background-color: #dc3545;
-  border-radius: 0.5rem; /* Borda arredondada */
-}
-
-
-/* Estilo para o formulário de checkout */
-.checkout-form {
-  background-color: #fff; /* Cor de fundo */
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-top: 20px; /* Espaçamento entre a tabela e o formulário */
-}
-
-.checkout-form h2 {
-  font-size: 1.5rem;
-  margin-bottom: 20px;
-  color: #0c0c0c; /* Cor para destacar o título */
-  text-align: center;
-  font-weight: bold;
-}
-
-.checkout-form .form-group {
-  margin-bottom: 20px; /* Espaçamento entre os grupos de formulário */
-}
-
-.checkout-form label {
-  color: #0c0c0c; /* Cor para o label */
-  font-weight: bold;
-}
-
-.checkout-form .form-control {
-  border-radius: 5px; /* Borda arredondada */
-}
-
-.checkout-form .btn-primary {
-  background-color: #1d9ce6;
-  border: none;
-  border-radius: 0.5rem; /* Borda arredondada */
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.checkout-form .btn-primary:hover {
-  background-color: #0056b3;
-}
-

@@ -17,10 +17,11 @@ Auth::routes();
 
 //pagina inical
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
 
 //pagina de dashboard para quando o utilizador entra no sistema depois do login
+
 //se nao tiver autenticado mostrar login
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 

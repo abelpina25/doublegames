@@ -4,15 +4,15 @@
     @include('include.menu') <!-- Inclui o menu de navegação -->
 
     <div class="container"> <!-- Inicia o container principal -->
-        <h1>Carrinho de Compras:</h1> <!-- Título da página -->
+        <h1>O meu carrinho</h1> <!-- Título da página -->
 
         @if (session('message'))
             <!-- Verifica se há uma mensagem de sessão -->
-            <div class="alert alert-warning"> <!-- Exibe a mensagem dentro de um alerta -->
+            <div class="alert alert-warning text-center"> <!-- Exibe a mensagem dentro de um alerta -->
                 {{ session('message') }} <!-- Exibe a mensagem de sessão -->
             </div>
         @endif
-
+        <br>
         @if (empty($items))
             <!-- Verifica se o carrinho está vazio -->
             <div class="no-products"> <!-- Div para a mensagem de carrinho vazio -->
@@ -52,7 +52,7 @@
                 <!-- Exibe o total do carrinho -->
                 <strong>Total: {{ LaraCart::total($formatted = true, $withDiscount = true) }}</strong>
             </div>
-
+            <hr>
             <!-- Formulário de Checkout -->
             <div class="checkout-form"> <!-- Adiciona uma classe para estilização do formulário -->
                 <h2>Dados do Cliente</h2> <!-- Título para os dados do cliente -->
@@ -73,7 +73,7 @@
                         <input type="text" name="nif" id="nif" class="form-control" required>
                         <!-- Campo de entrada para o NIF do cliente -->
                     </div>
-
+                    <hr>
                     <h2>Dados do Cartão</h2> <!-- Título para os dados do cartão -->
                     <div class="form-group">
                         <label for="card_number"><i class="fas fa-credit-card"></i> Número do Cartão:</label> <!-- Rótulo para o campo Número do Cartão com ícone -->
