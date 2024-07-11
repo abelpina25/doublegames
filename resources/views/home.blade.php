@@ -20,17 +20,15 @@
             </div>
             <div class="col-md-12">
                 <div class="card featured-game-card">
-                    <div class="row no-gutters">
+                    <div class="row no-gutters h-100">
                         <div class="col-md-4">
-                            <img src="{{ asset('imagens/galaxy defender.png') }}" class="card-img" alt="Imagem do jogo em destaque">
+                            <img src="{{ asset('imagens/pong.png') }}" class="card-img h-100" alt="Imagem do jogo em destaque">
                         </div>
                         <div class="col-md-8">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column justify-content-center">
                                 <h5 class="card-title">Pong</h5>
-                                <br>
                                 <p class="card-text">Reviva a emoção dos primórdios dos videogames com Pong.</p>
                                 <p class="card-text">Projetado para dois jogadores, Pong oferece uma experiência simples, mas viciante, que testará suas habilidades e reflexos.</p>
-                                <br>
                                 <a href="{{ route('shop') }}" class="btn btn-cta">Comprar Agora</a>
                             </div>
                         </div>
@@ -113,8 +111,8 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card testimonial-card">
                     <div class="card-body">
-                        <p class="card-text">"Excelente variedade de jogos e preços acessíveis. Recomendo!"</p>
-                        <p class="card-text"><small class="text-muted">- João Silva</small></p>
+                        <p class="card-text">"Os preços são imbatíveis! Consegui economizar bastante nas minhas compras."</p>
+                        <p class="card-text"><small class="text-muted">- Carlos Lima</small></p>
                     </div>
                 </div>
             </div>
@@ -122,8 +120,8 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card testimonial-card">
                     <div class="card-body">
-                        <p class="card-text">"Entrega rápida e ótimo atendimento ao cliente. Estou muito satisfeito!"</p>
-                        <p class="card-text"><small class="text-muted">- Maria Sousa</small></p>
+                        <p class="card-text">"O site é muito intuitivo e fácil de usar. Fiz minha compra em poucos minutos."</p>
+                        <p class="card-text"><small class="text-muted">- Ana Paula</small></p>
                     </div>
                 </div>
             </div>
@@ -131,15 +129,15 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card testimonial-card">
                     <div class="card-body">
-                        <p class="card-text">"Já comprei vários jogos aqui e sempre tive uma experiência positiva."</p>
-                        <p class="card-text"><small class="text-muted">- Pedro Costa</small></p>
+                        <p class="card-text">"A experiência de compra no site foi excelente, tudo funciona perfeitamente."</p>
+                        <p class="card-text"><small class="text-muted">- Ricardo Mendes</small></p>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
-    
- <!-- Rodapé -->
+  <!-- Rodapé -->
 <footer class="footer mt-auto bg-dark text-white py-3">
     <div class="container">
         <div class="row justify-content-between">
@@ -179,7 +177,7 @@
                 <h5>Contato</h5>
                 <ul class="list-unstyled">
                     <li><i class="fas fa-envelope"></i> <strong>E-mail:</strong> DoubleAGames@gmail.com</li>
-                    <li class="fs-5"><i class="fas fa-phone"></i> <strong>Telefone:</strong> +92 3162859445</li>
+                    <li class="fs-5"><i class="fas fa-phone"></i> <strong>Telefone:</strong> 967654321</li>
                     <li><a href="{{ route('contact') }}"><strong>Para mais:</strong> Contacte-nos</a></li>
                 </ul>
             </div>
@@ -193,5 +191,3 @@
     </div>
 </footer>
 @endsection
-
-

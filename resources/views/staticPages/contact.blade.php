@@ -41,7 +41,7 @@
                         <br>
                         <ul class="list-unstyled">
                             <li class="fs-5"><i class="fas fa-map-marker-alt"></i> <strong>Endereço:</strong> Portugal, Lisboa, Pontinha </li>
-                            <li class="fs-5"><i class="fas fa-phone"></i> <strong>Telefone:</strong> +92 3162859445</li>
+                            <li class="fs-5"><i class="fas fa-phone"></i> <strong>Telefone: </strong>967654321</li>
                         </ul>
                     </div>
                 </div>
@@ -96,7 +96,7 @@
                 <h5>Contato</h5>
                 <ul class="list-unstyled">
                     <li><i class="fas fa-envelope"></i> <strong>E-mail:</strong> DoubleAGames@gmail.com</li>
-                    <li class="fs-5"><i class="fas fa-phone"></i> <strong>Telefone:</strong> +92 3162859445</li>
+                    <li class="fs-5"><i class="fas fa-phone"></i> <strong>Telefone:</strong> 967654321</li>
                     <li><a href="{{ route('contact') }}"><strong>Para mais:</strong> Contacte-nos</a></li>
                 </ul>
             </div>
