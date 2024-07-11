@@ -22,7 +22,7 @@
                 <div class="card featured-game-card">
                     <div class="row no-gutters">
                         <div class="col-md-4">
-                            <img src="{{ asset('imagens/5.jpg') }}" class="card-img" alt="Imagem do jogo em destaque">
+                            <img src="{{ asset('imagens/galaxy defender.png') }}" class="card-img" alt="Imagem do jogo em destaque">
                         </div>
                         <div class="col-md-8">
                             <div class="card-body">
